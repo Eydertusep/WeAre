@@ -84,3 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 });
+
+// Accordion Toggle Function
+function toggleAccordion(header) {
+    const item = header.parentElement;
+    const isActive = item.classList.contains('active');
+    
+    // Close all accordions
+    document.querySelectorAll('.accordion-item').forEach(accordion => {
+        accordion.classList.remove('active');
+    });
+    
+    // Open clicked accordion if it wasn't active
+    if (!isActive) {
+        item.classList.add('active');
+    }
+}
+
+
