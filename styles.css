@@ -355,6 +355,103 @@ body.proyecto-triguisar .btn-primary:hover {
   color: var(--text-light);
 }
 
+/* Agency Hashtags Section (Dedicated) */
+.agency-hashtags-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #582b11 0%, #cc5803 50%, #ff9505 100%);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.agency-hashtags-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.agency-hashtags-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.agency-hashtags-section > .container > p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.agency-hashtags-section .hashtags-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.agency-hashtags-section .agency-hashtag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+}
+
+.agency-hashtags-section .agency-hashtag:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .agency-hashtags-section {
+    padding: 60px 0;
+  }
+
+  .agency-hashtags-section h2 {
+    font-size: 2rem;
+  }
+
+  .agency-hashtags-section > .container > p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .agency-hashtags-section .hashtags-container {
+    padding: 0 1rem;
+  }
+
+  .agency-hashtags-section .agency-hashtag {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.9rem;
+    margin: 0.4rem;
+  }
+}
+
 /* Services Grid */
 .services-grid {
   display: grid;
@@ -938,6 +1035,53 @@ body.proyecto-triguisar .btn-primary:hover {
   letter-spacing: 1px;
 }
 
+/* Agency Hashtags Section */
+.agency-hashtags {
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.agency-hashtags h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+}
+
+.hashtags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.agency-hashtag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.agency-hashtag:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 @media (max-width: 768px) {
   .social-links-wrapper {
     flex-direction: column;
@@ -947,6 +1091,25 @@ body.proyecto-triguisar .btn-primary:hover {
   .instagram-wrapper {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .agency-hashtags {
+    margin-top: 2rem;
+  }
+
+  .agency-hashtags h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hashtags-container {
+    gap: 0.6rem;
+    padding: 0 1rem;
+  }
+
+  .agency-hashtag {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -1506,6 +1669,7 @@ body.proyecto-triguisar .btn-primary:hover {
 .hashtag-section,
 .netiquette-section,
 .roles-section,
+.presupuesto-section,
 .calendar-section,
 .metrics-section,
 .argumentation-section {
@@ -1526,6 +1690,10 @@ body.proyecto-triguisar .btn-primary:hover {
 
 .roles-section {
   background: #e7d7c9;
+}
+
+.presupuesto-section {
+  background: var(--white);
 }
 
 .calendar-section {
@@ -1840,6 +2008,269 @@ body.proyecto-triguisar .btn-primary:hover {
   margin-top: 1.5rem;
   font-size: 0.9rem;
   color: var(--text-light);
+}
+
+/* Presupuesto Section Styles */
+.presupuesto-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.presupuesto-block {
+  background: #f9f7f5;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+  border-left: 4px solid #cc5803;
+}
+
+.presupuesto-block h3 {
+  color: #582b11;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.presupuesto-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.calc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid #e7d7c9;
+}
+
+.calc-item.calc-total {
+  background: linear-gradient(135deg, #582b11 0%, #cc5803 100%);
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+}
+
+.calc-label {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.calc-total .calc-label {
+  color: var(--white);
+}
+
+.calc-value {
+  color: #582b11;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.calc-total .calc-value {
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.presupuesto-table-wrapper {
+  overflow-x: auto;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e7d7c9;
+}
+
+.presupuesto-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.presupuesto-table thead {
+  background: linear-gradient(135deg, #582b11 0%, #cc5803 100%);
+  color: var(--white);
+}
+
+.presupuesto-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.presupuesto-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  color: var(--text-light);
+  vertical-align: top;
+}
+
+.presupuesto-table tbody tr:hover {
+  background: #e7d7c9;
+  transition: background 0.3s ease;
+}
+
+.presupuesto-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.presupuesto-table .table-total {
+  background: #e7d7c9;
+  font-weight: 600;
+}
+
+.presupuesto-table .table-total td {
+  color: #582b11;
+  font-size: 1.1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.honorarios-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid #e7d7c9;
+}
+
+.info-label {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.info-value {
+  color: #582b11;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.condiciones-pago {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #e7d7c9;
+  margin-top: 1.5rem;
+}
+
+.condiciones-pago h4 {
+  color: #582b11;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.pago-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pago-list li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pago-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #cc5803;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.meses-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.mes-item {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #e7d7c9;
+}
+
+.mes-item h4 {
+  color: #582b11;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.mes-calculation {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.mes-calculation strong {
+  color: #582b11;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments for presupuesto section */
+@media (max-width: 768px) {
+  .presupuesto-block {
+    padding: 1.5rem;
+  }
+
+  .presupuesto-block h3 {
+    font-size: 1.3rem;
+  }
+
+  .calc-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .presupuesto-table-wrapper {
+    padding: 1rem;
+  }
+
+  .presupuesto-table {
+    font-size: 0.9rem;
+  }
+
+  .presupuesto-table th,
+  .presupuesto-table td {
+    padding: 0.75rem 1rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .meses-info {
+    grid-template-columns: 1fr;
+  }
 }
 
 .calendar-intro {
@@ -2965,6 +3396,331 @@ body.proyecto-triguisar .btn-primary:hover {
 
   .phase-box {
     padding: 2rem 1.5rem;
+  }
+}
+
+/* Ecosistema Digital Section */
+.ecosistema-section {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+.ecosistema-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ecosistema-main-title {
+  font-size: 2rem;
+  color: #582b11;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 3px solid #cc5803;
+  padding-bottom: 1rem;
+}
+
+.ecosistema-phase {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+  border-left: 5px solid #cc5803;
+}
+
+.ecosistema-phase h3 {
+  color: #582b11;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ecosistema-phase h3 i {
+  color: #cc5803;
+  font-size: 1.5rem;
+}
+
+.ecosistema-phase > p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.ecosistema-phase h4 {
+  color: #582b11;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+/* Table Styles */
+.ecosistema-table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ecosistema-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  min-width: 600px;
+}
+
+.ecosistema-table thead {
+  background: linear-gradient(135deg, #582b11 0%, #cc5803 100%);
+  color: var(--white);
+}
+
+.ecosistema-table th {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ecosistema-table td {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid #e7d7c9;
+  color: var(--text-dark);
+  vertical-align: top;
+}
+
+.ecosistema-table tbody tr:hover {
+  background: #f8f5f2;
+  transition: background 0.3s ease;
+}
+
+.ecosistema-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ecosistema-table td strong {
+  color: #582b11;
+  font-weight: 600;
+}
+
+/* Flow Container */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.flow-box {
+  background: #f8f5f2;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #e7d7c9;
+  border-left: 4px solid #cc5803;
+}
+
+.flow-box h4 {
+  color: #582b11;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.flow-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.flow-list li {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.flow-protocol {
+  background: #e7d7c9;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  color: #582b11;
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  border-left: 3px solid #cc5803;
+}
+
+/* Omnichannel Scenario */
+.omnichannel-scenario {
+  background: #f8f5f2;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid #ff9505;
+}
+
+.omnichannel-scenario h4 {
+  color: #582b11;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.scenario-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+.scenario-list li {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* Testing Box */
+.testing-box {
+  background: #fff8f0;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 2px solid #ff9505;
+  border-left: 5px solid #ff9505;
+}
+
+.testing-box h4 {
+  color: #582b11;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testing-box h4 i {
+  color: #ff9505;
+}
+
+.testing-list {
+  list-style: none;
+  padding: 0;
+}
+
+.testing-list li {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.testing-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #cc5803;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.testing-list li strong {
+  color: #582b11;
+  font-weight: 600;
+}
+
+/* Argumentation Phase */
+.argumentation-phase {
+  background: linear-gradient(135deg, #f8f5f2 0%, #e7d7c9 100%);
+  border-left: 5px solid #582b11;
+}
+
+.argumentation-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.argumentation-content p {
+  color: var(--text-dark);
+  line-height: 1.9;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin: 0;
+}
+
+.argumentation-content strong {
+  color: #582b11;
+  font-weight: 600;
+}
+
+/* Responsive Design for Ecosistema Section */
+@media (max-width: 768px) {
+  .ecosistema-section {
+    padding: 60px 0;
+  }
+
+  .ecosistema-main-title {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .ecosistema-phase {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ecosistema-phase h3 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .ecosistema-table-wrapper {
+    margin: 1.5rem -1.5rem;
+    border-radius: 0;
+  }
+
+  .ecosistema-table {
+    min-width: 700px;
+  }
+
+  .ecosistema-table th,
+  .ecosistema-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .flow-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .flow-box {
+    padding: 1.5rem;
+  }
+
+  .omnichannel-scenario,
+  .testing-box {
+    padding: 1.5rem;
+  }
+
+  .argumentation-content {
+    padding: 1.5rem;
+  }
+
+  .argumentation-content p {
+    font-size: 1rem;
   }
 }
 
